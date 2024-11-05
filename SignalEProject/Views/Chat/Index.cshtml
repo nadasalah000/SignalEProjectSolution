@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["title"] = "Index";
+    Layout = "_Layout";
+}
+<style>
+    .container {
+    @*padding: 4rem;*@ 
+    padding: 2rem;
+        margin: 4rem;
+    }
+
+    #publicTalk {
+        @*background-color: #09c;*@
+        background-color: #fd7e14;
+        @*border: thick solid #808080;*@ 
+        border: thick solid black;
+    }
+
+    #groupConversation {
+        @*background-color: #b200ff;*@
+        background-color: #ffc107;
+        @*border: thick solid #808080;*@ 
+        border: thick solid black;
+    }
+</style>
+<script src="~/js/Chat.js"></script>
+<div id="publicTalk" class="container">
+    <input type="text" id="messageInp" />
+    <input class="btn btn-outline-dark " type="submit" id="sendMessageBtn" value="Send" />
+    <ul id="conversation">
+    </ul>
+</div>
+<div id="groupConversation" class="container">
+    <div>
+        <input type="text" id="groupNameInp" />
+        <input class="btn btn-outline-dark " type="submit" id="joinGroupBtn" value="Join" />
+    </div>
+    <br />
+    <div>
+        <input type="text" id="messageToGroupInp" />
+        <input class="btn btn-outline-dark " type="submit" id="sendMessageToGroupBtn" value="Send To Group" />
+    </div>
+    <ul id="groupConversationUL">
+    </ul>
+</div>
+
